@@ -3,7 +3,7 @@ import numpy as np
 import time
 
 # Paramètres de la grille
-WIDTH, HEIGHT = 800, 800
+WIDTH, HEIGHT = 1600, 800
 CELL_SIZE = 10
 GRID_WIDTH = WIDTH // CELL_SIZE
 GRID_HEIGHT = HEIGHT // CELL_SIZE
@@ -11,6 +11,7 @@ GRID_HEIGHT = HEIGHT // CELL_SIZE
 # Couleurs
 BLACK = (0, 0, 0)
 WHITE = (255, 255, 255)
+GRAY = (20, 20, 20)
 TEXT_COLOR = (200, 200, 200)
 
 # Initialisation de pygame
@@ -45,7 +46,7 @@ running_simulation = False  # Mode de sélection au départ
 # Boucle principale
 running = True
 while running:
-    screen.fill(BLACK)
+    screen.fill(GRAY)
 
     # Événements
     for event in pygame.event.get():
@@ -62,6 +63,7 @@ while running:
 
     # Si la simulation est en cours
     if running_simulation:
+        screen.fill(BLACK)
         # Calcul de la prochaine génération
         new_grid = np.copy(grid)
         for x in range(GRID_WIDTH):
@@ -95,7 +97,7 @@ while running:
         screen.blit(iteration_text, (10, 10))
 
     pygame.display.flip()
-    time.sleep(0.1)
+    time.sleep(0.05)
 
 # Quitter pygame
 pygame.quit()
