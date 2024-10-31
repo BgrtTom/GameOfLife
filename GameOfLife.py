@@ -54,12 +54,13 @@ while running:
             running = False
         elif event.type == pygame.KEYDOWN:
             if event.key == pygame.K_SPACE:
-                running_simulation = True  # Démarre la simulation
+                running_simulation = not running_simulation  # Démarre la simulation
         elif event.type == pygame.MOUSEBUTTONDOWN and not running_simulation:
             # Sélection des cellules avec un clic
             x, y = pygame.mouse.get_pos()
             grid_x, grid_y = x // CELL_SIZE, y // CELL_SIZE
             grid[grid_x, grid_y] = 1 - grid[grid_x, grid_y]  # Inverse l'état de la cellule
+
 
     # Si la simulation est en cours
     if running_simulation:
@@ -81,6 +82,7 @@ while running:
         # Mise à jour de la grille et de l'itération
         grid = new_grid
         iteration += 1
+
 
     # Affichage de la grille
     for x in range(GRID_WIDTH):
