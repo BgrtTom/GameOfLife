@@ -54,7 +54,7 @@ while running:
             running = False
         elif event.type == pygame.KEYDOWN:
             if event.key == pygame.K_SPACE:
-                running_simulation = not running_simulation  # Démarre la simulation
+                running_simulation = not running_simulation  # Démarre la simulation ou bien met la simulation en pause
         elif event.type == pygame.MOUSEBUTTONDOWN and not running_simulation:
             # Sélection des cellules avec un clic
             x, y = pygame.mouse.get_pos()
