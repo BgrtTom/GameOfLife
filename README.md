@@ -23,6 +23,7 @@ In the Game of Life, each cell has two states: alive or dead. The evolution of c
 - Python 3.x
 - `pygame` library
 - `numpy` library
+- `time` library
 
 To install library, run:
 ```bash
