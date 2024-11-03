@@ -46,14 +46,14 @@ running_simulation = False  # Mode de sélection au départ
 # Boucle principale
 running = True
 while running:
-    screen.fill(GRAY)
+    screen.fill(GRAY) # Affichage de la grille de selection des cellules
 
     # Événements
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             running = False
         elif event.type == pygame.KEYDOWN:
-            if event.key == pygame.K_SPACE:
+            if event.key == pygame.K_SPACE: # Bar espace
                 running_simulation = not running_simulation  # Démarre la simulation ou bien met la simulation en pause
         elif event.type == pygame.MOUSEBUTTONDOWN and not running_simulation:
             # Sélection des cellules avec un clic
@@ -64,7 +64,7 @@ while running:
 
     # Si la simulation est en cours
     if running_simulation:
-        screen.fill(BLACK)
+        screen.fill(BLACK) # Enleve la grille de selection des cellules
         # Calcul de la prochaine génération
         new_grid = np.copy(grid)
         for x in range(GRID_WIDTH):
