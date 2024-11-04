@@ -2,7 +2,7 @@
 # Game of Life
 
 
-This project is an implementation of **Conway's Game of Life** in Python, using the `pygame` library for visual rendering. In this cellular automaton, cells in a grid evolve over iterations according to simple rules, creating complex and often fascinating patterns.
+This project is an implementation of **Conway's Game of Life** in Python, using the `pygame` library for visual rendering. In this cellular automaton, cells in a grid evolve over iterations according to simple rules, creating complex and often fascinating patterns. 
 
 ## Rules of the Game
 
