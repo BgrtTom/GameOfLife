@@ -2,7 +2,7 @@ import pygame
 import numpy as np
 import time
 
-# Paramètres de la grille
+# Paramètres de la grille 
 WIDTH, HEIGHT = 1600, 800
 CELL_SIZE = 10
 GRID_WIDTH = WIDTH // CELL_SIZE
