@@ -83,14 +83,14 @@ while running:
         grid = new_grid
         iteration += 1
 
-
+    
     # Affichage de la grille
     for x in range(GRID_WIDTH):
         for y in range(GRID_HEIGHT):
             color = WHITE if grid[x, y] == 1 else BLACK
             pygame.draw.rect(screen, color, (x * CELL_SIZE, y * CELL_SIZE, CELL_SIZE - 1, CELL_SIZE - 1))
 
-    # Affichage du texte
+    # Affichage du texte 
     if not running_simulation:
         instruction_text = font.render("Cliquez pour sélectionner les cellules, Espace pour démarrer", True, TEXT_COLOR)
         screen.blit(instruction_text, (10, 10))
@@ -99,6 +99,7 @@ while running:
         screen.blit(iteration_text, (10, 10))
 
     pygame.display.flip()
+    #Pause entre chaque itération
     time.sleep(0.05)
 
 # Quitter pygame
